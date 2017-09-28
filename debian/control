@@ -1,0 +1,35 @@
+Source: golang-github-golang-mock
+Section: devel
+Priority: optional
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
+Build-Depends: debhelper (>= 10),
+               dh-golang,
+               golang-any,
+Standards-Version: 4.1.0
+Homepage: https://github.com/golang/mock
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-golang-mock.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-golang-mock.git
+XS-Go-Import-Path: github.com/golang/mock
+Testsuite: autopkgtest-pkg-go
+
+Package: golang-github-golang-mock-dev
+Architecture: all
+Depends: ${misc:Depends},
+Suggests: mockgen,
+Description: mocking framework for the Go programming language
+ GoMock is a mocking framework for the Go programming language.
+ It integrates well with Go's built-in testing package, but can be used in
+ other contexts too.
+
+Package: mockgen
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Built-Using: ${misc:Built-Using},
+Description: mocking framework for the Go programming language - mockgen
+ GoMock is a mocking framework for the Go programming language.
+ It integrates well with Go's built-in testing package, but can be used in
+ other contexts too.
+ .
+ This package provides the "mockgen" utility.
